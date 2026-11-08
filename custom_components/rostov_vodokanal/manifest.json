@@ -1,16 +1,19 @@
 {
   "domain": "rostov_vodokanal",
   "name": "Ростовводоканал",
-  "version": "1.0.0",
-  "config_flow": true,
-  "integration_type": "service",
-  "iot_class": "cloud_polling",
-  "requirements": [
-    "beautifulsoup4==4.14.3"
-  ],
   "codeowners": [
     "@NyrouxHide"
   ],
+  "config_flow": true,
   "documentation": "https://github.com/NyrouxHide/hass-rostov-vodokanal",
-  "issue_tracker": "https://github.com/NyrouxHide/hass-rostov-vodokanal/issues"
+  "integration_categories": [
+    "water"
+  ],
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/NyrouxHide/hass-rostov-vodokanal/issues",
+  "requirements": [
+    "beautifulsoup4==4.15.0"
+  ],
+  "version": "1.0.0"
 }
