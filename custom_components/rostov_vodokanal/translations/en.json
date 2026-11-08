@@ -1,0 +1,138 @@
+{
+  "title": "Rostov Vodokanal",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Rostov Vodokanal",
+        "description": "Enter an account number. Readings, dates and payment totals are available without a password. Setup never submits or cancels readings.",
+        "data": {
+          "account": "Account number"
+        }
+      }
+    },
+    "error": {
+      "invalid_account": "Account not found or unavailable.",
+      "cannot_connect": "Cannot connect to the provider.",
+      "portal_changed": "The portal response format has changed."
+    },
+    "abort": {
+      "already_configured": "This account is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Data updates",
+        "data": {
+          "scan_interval": "Update interval in minutes (15–1440)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "debt": {
+        "name": "Service debt"
+      },
+      "penalties": {
+        "name": "Penalties"
+      },
+      "total_due": {
+        "name": "Total due"
+      },
+      "billing_period": {
+        "name": "Billing period"
+      },
+      "updated_at": {
+        "name": "Last update"
+      },
+      "last_reading": {
+        "name": "Last submitted reading"
+      },
+      "last_submission": {
+        "name": "Last submission date"
+      },
+      "verification_date": {
+        "name": "Next verification"
+      }
+    },
+    "binary_sensor": {
+      "can_submit": {
+        "name": "Submission available"
+      },
+      "can_cancel": {
+        "name": "Cancellation available"
+      }
+    },
+    "button": {
+      "refresh": {
+        "name": "Refresh data"
+      }
+    }
+  },
+  "services": {
+    "refresh": {
+      "name": "Refresh data",
+      "description": "Read the portal without changing readings.",
+      "fields": {
+        "config_entry_id": {
+          "name": "Account",
+          "description": "Select the configured account."
+        }
+      }
+    },
+    "send_reading": {
+      "name": "Submit reading",
+      "description": "Submit a reading and verify the new portal record. Same-day duplicates are blocked.",
+      "fields": {
+        "config_entry_id": {
+          "name": "Account",
+          "description": "Select the configured account."
+        },
+        "meter_id": {
+          "name": "Meter ID",
+          "description": "The reading sensor meter_id attribute. Optional for a single meter."
+        },
+        "value": {
+          "name": "Reading, m³",
+          "description": "Actual meter reading. Templates may use an existing Home Assistant counter."
+        }
+      }
+    },
+    "cancel_reading": {
+      "name": "Cancel reading",
+      "description": "Cancel the expected reading_id. A changed record will not be removed.",
+      "fields": {
+        "config_entry_id": {
+          "name": "Account",
+          "description": "Select the configured account."
+        },
+        "meter_id": {
+          "name": "Meter ID",
+          "description": "The reading sensor meter_id attribute. Optional for a single meter."
+        },
+        "reading_id": {
+          "name": "Expected reading ID",
+          "description": "The reading sensor reading_id attribute. Only this record will be cancelled."
+        }
+      }
+    }
+  },
+  "exceptions": {
+    "refresh_failed": {
+      "message": "Unable to refresh the portal."
+    },
+    "rejected": {
+      "message": "Operation rejected: {reason}"
+    },
+    "mutation_uncertain": {
+      "message": "The operation outcome is unconfirmed. Refresh the portal before deciding whether to resend or cancel. Writes are never retried automatically."
+    },
+    "portal_error": {
+      "message": "Unable to complete the portal operation."
+    },
+    "stale_reading": {
+      "message": "The reading record changed. Refresh the data and select its current reading_id."
+    }
+  }
+}

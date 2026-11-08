@@ -1,0 +1,13 @@
+{
+  "services": {
+    "refresh": {
+      "service": "mdi:refresh"
+    },
+    "send_reading": {
+      "service": "mdi:upload"
+    },
+    "cancel_reading": {
+      "service": "mdi:undo"
+    }
+  }
+}

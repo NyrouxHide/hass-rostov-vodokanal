@@ -1,0 +1,45 @@
+refresh:
+  fields:
+    config_entry_id:
+      required: true
+      selector:
+        config_entry:
+          integration: rostov_vodokanal
+
+send_reading:
+  fields:
+    config_entry_id:
+      required: true
+      selector:
+        config_entry:
+          integration: rostov_vodokanal
+    meter_id:
+      example: "123456_0"
+      selector:
+        text:
+    value:
+      required: true
+      example: 123
+      selector:
+        number:
+          min: 0
+          max: 99999999
+          step: 0.001
+          mode: box
+
+cancel_reading:
+  fields:
+    config_entry_id:
+      required: true
+      selector:
+        config_entry:
+          integration: rostov_vodokanal
+    meter_id:
+      example: "123456_0"
+      selector:
+        text:
+    reading_id:
+      required: true
+      example: "987654321"
+      selector:
+        text:
