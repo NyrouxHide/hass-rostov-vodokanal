@@ -2,8 +2,8 @@
 
 # Ростовводоканал для Home Assistant
 
-[![Проверки](https://github.com/NyrouxHide/hass-rostov-vodokanal/actions/workflows/ci.yaml/badge.svg)](https://github.com/NyrouxHide/hass-rostov-vodokanal/actions)
-[![HACS / Marketplace](https://img.shields.io/badge/HACS-custom-orange.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=NyrouxHide&repository=hass-rostov-vodokanal&category=integration)
+[![Проверки](https://github.com/nyrouxx/hass-rostov-vodokanal/actions/workflows/ci.yaml/badge.svg)](https://github.com/nyrouxx/hass-rostov-vodokanal/actions)
+[![HACS / Marketplace](https://img.shields.io/badge/HACS-custom-orange.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=nyrouxx&repository=hass-rostov-vodokanal&category=integration)
 [![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2026.3%2B-blue.svg)](https://www.home-assistant.io/)
 [![Лицензия MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
@@ -37,10 +37,10 @@
 В Home Assistant 2026.11 HACS стал встроенным **Marketplace**. Отдельно
 устанавливать HACS на этих версиях не нужно.
 
-[![Открыть HACS / Marketplace](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=NyrouxHide&repository=hass-rostov-vodokanal&category=integration)
+[![Открыть HACS / Marketplace](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=nyrouxx&repository=hass-rostov-vodokanal&category=integration)
 
 1. Откройте **Настройки → Marketplace → Добавить по ссылке**.
-2. Укажите `https://github.com/NyrouxHide/hass-rostov-vodokanal`.
+2. Укажите `https://github.com/nyrouxx/hass-rostov-vodokanal`.
 3. Если потребуется выбрать тип, выберите **Интеграция**.
 4. Откройте добавленный репозиторий и нажмите **Установить**.
 5. Выполните перезапуск Home Assistant, если Marketplace об этом попросит.
@@ -55,7 +55,7 @@
 
 1. Установите и настройте [HACS по его инструкции](https://hacs.xyz/docs/use/).
 2. В HACS откройте меню **⋮ → Пользовательские репозитории**.
-3. Добавьте `https://github.com/NyrouxHide/hass-rostov-vodokanal`, тип **Интеграция**.
+3. Добавьте `https://github.com/nyrouxx/hass-rostov-vodokanal`, тип **Интеграция**.
 4. Найдите **Ростовводоканал**, скачайте и перезапустите Home Assistant.
 5. Добавьте интеграцию через **Настройки → Устройства и службы** и укажите лицевой счёт.
 
@@ -278,7 +278,7 @@ data:
 одного счётчика на один и тот же день.
 
 Диагностика доступна в меню записи интеграции. При обращении в
-[Issues](https://github.com/NyrouxHide/hass-rostov-vodokanal/issues) укажите версию
+[Issues](https://github.com/nyrouxx/hass-rostov-vodokanal/issues) укажите версию
 Home Assistant и интеграции, описание действия и обезличенный текст ошибки.
 Лицевой счёт, адрес, cookies и CSRF публиковать не нужно.
 
